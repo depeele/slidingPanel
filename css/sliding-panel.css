@@ -1,0 +1,228 @@
+/* In terms of a horizontal orientation, the measurements for a tab,
+ * specifically a tab-label, are:
+ *  tab-width:    10em
+ *  tab-height:    2em
+ *  panel-width:  20em
+ */
+.sliding-panel {
+  position: absolute;
+  overflow: hidden;
+  z-index:  999;
+}
+.sliding-panel .tabs {
+  list-style: none;
+  margin:     0;
+  padding:    0;
+}
+.sliding-panel .tab {
+}
+.sliding-panel .tab-label {
+  position:         relative;
+  padding:          0.25em;
+  border:           1px solid #999;
+  background-color: #eee;
+  cursor:           pointer;
+}
+.sliding-panel .tab-label h1 {
+  width:            9.5em;      /* tab-width - (.tab-label:padding * 2) */
+}
+
+.sliding-panel .tab-content-wrapper {
+  position:         absolute;
+  z-index:          1;
+}
+.sliding-panel .tab-content {
+  background-color: #fff;
+  border:           1px solid #999;
+  padding:          0.5em;
+}
+
+.sliding-panel .tab-selected,
+.sliding-panel .tab-selected .tab-label {
+  background-color: #fff;
+}
+.sliding-panel .tab-selected,
+.sliding-panel .tab-selected .tab-content-wrapper {
+  z-index:          2;
+}
+.sliding-panel .tab-selected .tab-label {
+  z-index:          3;
+}
+
+/********************************************
+ * Vertical tabs {
+ *
+ */
+.panel-vertical {
+  height: 100%;
+  width:  2em;                  /* tab-height */
+  top:    0;
+}
+.panel-vertical.opened {
+  width:  21.95em;              /* panel-width - 0.05em */
+}
+
+.panel-vertical .tab {
+  height:         10em;         /* tab-width */
+  margin-bottom:  0.2em;
+}
+
+.panel-vertical .tab-label {
+  width:  2em;                  /* tab-height */
+  height: 10em;                 /* tab-width */
+}
+.panel-vertical .tab-label h1 {
+  position: absolute;
+}
+
+.panel-vertical .tab-content-wrapper {
+  top:      0;
+  height:   100%;
+}
+.panel-vertical .tab-content {
+  height:   100%;
+  overflow: auto;
+}
+
+/* Vertical left */
+.panel-left {
+  left:   0;
+}
+
+.panel-left .tab {
+}
+
+.panel-left .tab-label {
+  position:       absolute;
+  right:          0;
+
+  border-radius:  0 0.5em 0.5em 0;
+  border-left:    none;
+}
+.panel-left .tab-label h1 {
+  top:                4.5em;    /* (.tab-label h1:width / 2) + 0.25em */
+  right:              -3.75em;  /* (.tab-label h1:width / 2) - 0.5em  */
+
+  transform:          rotate(90deg);
+  -moz-transform:     rotate(90deg);
+  -webkit-transform:  rotate(90deg);
+}
+
+.panel-left .tab-content-wrapper {
+  right:        1.95em;         /* tab-height - 0.05em */
+}
+
+.panel-left .tab-content {
+  width:          20em;         /* panel-width */
+  border-left:    none;
+}
+
+/* Vertical right */
+.panel-right {
+  right:  0;
+}
+
+.panel-right .tab {
+}
+
+.panel-right .tab-label {
+  border-radius:  0.5em 0 0 0.5em;
+  border-right:   none;
+}
+.panel-right .tab-label h1 {
+  bottom:             4.5em;    /* (.tab-label h1:width / 2) + 0.25 */
+  left:               -3.75em;  /* (.tab-label h1:width / 2) - 0.5  */
+
+  transform:          rotate(-90deg);
+  -moz-transform:     rotate(-90deg);
+  -webkit-transform:  rotate(-90deg);
+}
+
+.panel-right .tab-content-wrapper {
+  left:         1.95em;         /* tab-height - 0.05em */
+}
+.panel-right .tab-content {
+  width:          20em;         /* panel-width */
+  border-right:   none;
+}
+
+/* Vertical tabs }
+ ********************************************
+ * Horizontal tabs {
+ *
+ */
+.panel-horizontal {
+  width:  100%;
+  height: 2em;                  /* tab-height */
+  left:   0;
+}
+.panel-horizontal.opened {
+  height: 21.95em;              /* panel-width - 0.05em */
+}
+
+.panel-horizontal .tab {
+  display:      inline-block;
+
+  width:        10em;           /* tab-width */
+  margin-right: 0.2em;
+}
+
+.panel-horizontal .tab-label {
+  height: 2em;                  /* tab-height */
+  width:  10em;                 /* tab-width */
+}
+
+.panel-horizontal .tab-content-wrapper {
+  left:     0;
+  width:    100%;
+}
+.panel-horizontal .tab-content {
+  width:    100%;
+  overflow: auto;
+}
+
+/* Horizontal top */
+.panel-top {
+  top:    0;
+}
+
+.panel-top .tab-label {
+  position:       absolute;
+  bottom:         0;
+
+  border-radius:  0 0 0.5em 0.5em;
+  border-top:     none;
+}
+
+.panel-top .tab-content-wrapper {
+  bottom:       1.95em;         /* tab-height - 0.05em */
+}
+.panel-top .tab-content {
+  height:         20em;         /* panel-width */
+  border-top:     none;
+}
+
+/* Horizontal bottom */
+.panel-bottom {
+  bottom: 0;
+}
+
+.panel-bottom .tab-label {
+  position:       absolute;
+  top:            0;
+
+  border-radius:  0.5em 0.5em 0 0;
+  border-bottom:  none;
+}
+
+.panel-bottom .tab-content-wrapper {
+  top:          1.95em;         /* tab-height - 0.05em */
+}
+.panel-bottom .tab-content {
+  height:         20em;         /* panel-width */
+  border-bottom:  none;
+}
+
+
+/* Horizontal tabs }
+ ********************************************/

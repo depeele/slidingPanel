@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang='en'>
+<head>
+ <meta charset="utf-8">
+ 
+ <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+      Remove this if you use the .htaccess -->
+ <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
+ <title>Sliding Panel Test</title>
+ 
+ <meta name="description" content="Sliding Panel Test">
+ <meta name="author" content="D. Elmo Peele">
+ 
+ <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+ <link rel="stylesheet" href="css/reset.css" />
+ <link rel="stylesheet" href="css/sliding-panel.css" />
+
+ <style type='text/css'>
+#container, #content {
+  width:  100%;
+  height: 100%;
+}
+#content {
+  padding:  3em;
+}
+
+#main {
+  border: 1px solid #999;
+}
+
+ </style>
+</head>
+
+<body>
+ <div id='container'>
+  <div id="panel-right"><!-- panel { -->
+    <ul class='tabs'>
+      <li class='tab tab-selected'>
+       <header class='tab-label'><h1>Private IPs</h1></header>
+       <div    class='tab-content'>
+         <p>Tab 1 content</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+       </div>
+      </li>
+      <li class='tab'>
+       <header class='tab-label'><h1>Alerts</h1></header>
+       <div    class='tab-content'>
+         <p>Tab 2 content</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+       </div>
+      </li>
+      <li class='tab'>
+       <header class='tab-label'><h1>Overview Statistics</h1></header>
+       <div    class='tab-content'>
+         <p>Tab 3 content</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+       </div>
+      </li>
+    </ul>
+  </div><!-- panel } -->
+  <div id="panel-left"><!-- panel { -->
+    <ul class='tabs'>
+      <li class='tab tab-selected'>
+       <header class='tab-label'><h1>Tab 1</h1></header>
+       <div    class='tab-content'>
+         <p>Tab 1 content</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+       </div>
+      </li>
+      <li class='tab'>
+       <header class='tab-label'><h1>Tab 2</h1></header>
+       <div    class='tab-content'>
+         <p>Tab 2 content</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+       </div>
+      </li>
+      <li class='tab'>
+       <header class='tab-label'><h1>Tab 3</h1></header>
+       <div    class='tab-content'>
+         <p>Tab 3 content</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+       </div>
+      </li>
+    </ul>
+  </div><!-- panel } -->
+  <div id="panel-top"><!-- panel { -->
+    <ul class='tabs'>
+      <li class='tab tab-selected'>
+       <header class='tab-label'><h1>Tab 1</h1></header>
+       <div    class='tab-content'>
+         <p>Tab 1 content</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+       </div>
+      </li>
+      <li class='tab'>
+       <header class='tab-label'><h1>Tab 2</h1></header>
+       <div    class='tab-content'>
+         <p>Tab 2 content</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+       </div>
+      </li>
+      <li class='tab'>
+       <header class='tab-label'><h1>Tab 3</h1></header>
+       <div    class='tab-content'>
+         <p>Tab 3 content</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+       </div>
+      </li>
+    </ul>
+  </div><!-- panel } -->
+  <div id="panel-bottom"><!-- panel { -->
+    <ul class='tabs'>
+      <li class='tab tab-selected'>
+       <header class='tab-label'><h1>Tab 1</h1></header>
+       <div    class='tab-content'>
+         <p>Tab 1 content</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+       </div>
+      </li>
+      <li class='tab'>
+       <header class='tab-label'><h1>Tab 2</h1></header>
+       <div    class='tab-content'>
+         <p>Tab 2 content</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+       </div>
+      </li>
+      <li class='tab'>
+       <header class='tab-label'><h1>Tab 3</h1></header>
+       <div    class='tab-content'>
+         <p>Tab 3 content</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+         <p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+       </div>
+      </li>
+    </ul>
+  </div><!-- panel } -->
+    
+  <div id="content"><!-- content { -->
+   <div id="main" role="main"><!-- main { -->
+     <p>The main content</p>
+     <p>.....................................................</p>
+     <p>.....................................................</p>
+     <p>.....................................................</p>
+     <p>.....................................................</p>
+     <p>.....................................................</p>
+     <p>.....................................................</p>
+     <p>.....................................................</p>
+     <p>.....................................................</p>
+     <p>.....................................................</p>
+     <p>.....................................................</p>
+     <p>.....................................................</p>
+     <p>.....................................................</p>
+     <p>.....................................................</p>
+     <p>.....................................................</p>
+     <p>.....................................................</p>
+   </div><!-- main } -->
+ </div><!-- content } -->
+</body>
+<!-- scripts  and setup -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src='js/jquery.slidingPanel.js'></script>
+
+<script>
+(function($) {
+  $('#panel-right').slidingPanel({position:'right', margin:'2.5em'});
+  $('#panel-left').slidingPanel({position:'left', margin:'2.5em'});
+
+  $('#panel-top').slidingPanel({position:'top', margin:'2.5em'});
+  $('#panel-bottom').slidingPanel({position:'bottom', margin:'2.5em'});
+}(jQuery));
+
+</script>
+
+</html>
